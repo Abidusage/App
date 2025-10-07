@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a73e8;
+  padding: 8px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(26, 115, 232, 0.7);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+
+.form-container {
+  width: 50%;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.container a:hover{
+  text-decoration: none;
+}
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #1a73e8;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message,
+.success-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message.show,
+.success-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/*  Light Mode */
+body.light .container {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.light .form-container {
+  background-color: #ffffff;
+  color: #222;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+body.light .form-input {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+body.light .description .parag {
+  color: #333;
+}
+
+body.light .form-button {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+body.light .form-button:hover {
+  background-color: #0056b3;
+}
+
+/*  Dark Mode */
+body.dark .container {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+body.dark .form-container {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 12px rgba(255,255,255,0.05);
+}
+
+body.dark .form-input {
+  background-color: #2a2a2a;
+  color: #f4f4f4;
+  border: 1px solid #444;
+}
+
+body.dark .description .parag {
+  color: #ccc;
+}
+
+body.dark .form-button {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark .form-button:hover {
+  background-color: #666;
+}
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+
+.form-container,
+.form-input,
+.form-button,
+.parag {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description, .form-container {
+    width: 100%;
+  }
+
+  .description {
+    text-align: center;
+  }
+}

@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 300px;
+    
+   }
+  
+  .description {
+    width: 50%;
+    padding: 2px;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .description h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  
+  .description p {
+    font-size: 1.2rem;
+    /* line-height: 200.10; */
+  }
+  
+  .form-container {
+    width: 50%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h1 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .success-message {
+    color: #28a745;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .form-links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .form-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-links a:hover {
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .description, .form-container {
+      width: 100%;
+    }
+  
+    .description {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  

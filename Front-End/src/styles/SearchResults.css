@@ -1,0 +1,25 @@
+.search-results-container {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .result-group {
+    margin-bottom: 2rem;
+  }
+  
+  .result-group h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .badge {
+    background-color: #007bff;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+  
